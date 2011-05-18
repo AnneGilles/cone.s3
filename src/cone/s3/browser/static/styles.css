@@ -1,0 +1,7 @@
+/* main menu icon XXX: generic mechanism */
+ul#mainmenu li.node-s3 a {
+    background:url('images/menu_s3.png') top left no-repeat;
+}
+ul#mainmenu li.node-s3 a.current_page_item {
+    background:url('images/menu_s3_selected.png') top left no-repeat;
+}

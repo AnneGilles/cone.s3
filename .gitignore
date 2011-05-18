@@ -3,3 +3,12 @@
 *.py#
 .project
 .pydevproject
+.installed.cfg
+.mr.developer.cfg
+bin/
+develop-eggs/
+devsrc/
+downloads/*
+eggs/
+parts/
+src/cone.s3.egg-info/

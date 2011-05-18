@@ -1,0 +1,15 @@
+#!/bin/bash
+
+export PATH=${buildout:directory}/parts/erlang:$PATH
+
+case "$1" in
+    start)
+        ${buildout:directory}/parts/rg/rheingold-0.2.0/bin/rheingold start
+        ${buildout:directory}/parts/rg/rheingold-0.2.0/bin/rheingold set-admin tester testpw
+        ;;
+    stop)
+        ${buildout:directory}/parts/rg/rheingold-0.2.0/bin/rheingold stop
+        ;;
+esac
+
+exit 0

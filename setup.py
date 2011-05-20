@@ -32,6 +32,7 @@ setup(name='cone.s3',
           'node.ext.ugm',
           'cone.app',
           'yafowil.yaml',
+          'boto',
       ],
       extras_require = dict(
           test=[

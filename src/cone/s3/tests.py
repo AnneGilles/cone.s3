@@ -3,15 +3,16 @@ import interlude
 import pprint
 import unittest2 as unittest
 from plone.testing import layered
-from cone.time import testing
+from cone.app import testing
 
 optionflags = doctest.NORMALIZE_WHITESPACE | \
               doctest.ELLIPSIS | \
               doctest.REPORT_ONLY_FIRST_FAILURE
 
-layer = testing.Database()
+layer = testing.security
 
 TESTFILES = [
+    'nodes.txt',
 ]
 
 def test_suite():

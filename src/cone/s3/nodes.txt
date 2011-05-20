@@ -1,0 +1,40 @@
+
+    >>> from cone.s3.nodes import S3Config
+    >>> cfg = S3Config()
+    >>> cfg
+    <cone.s3.nodes.S3Config object at ...>
+    
+    >>> cfg.user
+    'tester'
+    
+    >>> cfg.password
+    'testpw'
+    
+    >>> cfg.host
+    'localhost'
+    
+    >>> cfg.port
+    8091
+    
+    >>> cfg.path
+    '/'
+    
+    >>> cfg.calling_format
+    <boto.s3.connection.OrdinaryCallingFormat instance at ...>
+    
+    >>> cfg.is_secure
+    False
+    
+    >>> from cone.s3.nodes import S3EntryNode
+    >>> entry = S3EntryNode(config=cfg)
+    >>> entry.keys()
+    []
+    
+    >>> from cone.s3.nodes import S3BucketNode
+    >>> entry['bucket_1'] = S3BucketNode()
+    
+    >>> bucket = entry['bucket_1']
+    >>> bucket
+    <S3BucketNode object 'bucket_1' at ...>
+    
+    >>> [k for k in entry]

@@ -10,6 +10,10 @@ case "$1" in
     stop)
         ${buildout:directory}/parts/rg/rheingold-0.2.0/bin/rheingold stop
         ;;
+    wipe)
+	${buildout:directory}/parts/rg/rheingold-0.2.0/bin/rheingold stop
+	rm ${buildout:directory}/parts/rg/rheingold-0.2.0/rheingold@127.0.0.1.*
+	rm ${buildout:directory}/parts/rg/rheingold-0.2.0/data/indexes/*.kct
 esac
 
 exit 0
